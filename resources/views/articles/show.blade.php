@@ -6,7 +6,7 @@
     <h1>{{$article->title}}</h1>
 
     <hr />
-
+<img src="{{$article->image}}" width='100' height='100'/>
 <article>{{$article -> body}}</article>
 
     <div class="col-md-6">
