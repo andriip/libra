@@ -68,4 +68,50 @@ class ArticlesController extends Controller
 
         return redirect()->route('articles.index');
     }
+
+    public function getImage()
+    {
+        $articleTitle = $_GET["title"];
+        $input = Request::all();
+        $a=rand(1,50);
+        $acctKey = 'iXX2NrEp8gfTPvsahjaj2KUAT+E7Quwelff4B6+MDnE';
+        $rootUri = 'https://api.datamarket.azure.com/Bing/Search';
+        $query = $articleTitle;
+        $serviceOp ='Image';
+        $market ='en-us';
+        $query = urlencode("'$query'");
+        $market = urlencode("'$market'");
+        $requestUri = "$rootUri/$serviceOp?\$format=json&Query=$query&Market=$market";
+        $auth = base64_encode("$acctKey:$acctKey");
+        $data = array(
+            'http' => array(
+                'request_fulluri' => true,
+                'ignore_errors' => true,
+                'header' => "Authorization: Basic $auth"
+            )
+        );
+        $context = stream_context_create($data);
+        $response = file_get_contents($requestUri, 0, $context);
+        $response=json_decode($response);
+        $response = $response->d->results[$a]->MediaUrl;
+        return response()->json(['img' => $response]);
+    }
+
+    public function saveImage()
+    {
+        $articleId = $_GET["articleId"];
+        $imageUrl = $_GET["imageUrl"];
+
+        $answer = "Image wasn't saved";
+
+        $article=Article::findOrFail($articleId);
+        if($article && $imageUrl!=""){
+            $article->image = $imageUrl;
+            $article->update();
+            $answer = "Image was saved";
+        }
+        return response()->json(['answer' => $answer]);
+
+    }
+
 }
