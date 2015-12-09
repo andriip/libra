@@ -11,6 +11,8 @@
 |
 */
 Route::get('/', 'ArticlesController@index');
+Route::get('articles/getImage', 'ArticlesController@getImage');
+Route::get('articles/saveImage', 'ArticlesController@saveImage');
 //
 //Route::get('articles/create', 'ArticlesController@create');
 //
