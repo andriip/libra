@@ -10,7 +10,7 @@
     {!! Form::textarea('body',null,['class'=>'form-control']) !!}
 </div>
 
-
+<input type="hidden" name="image" id="imageInput"/>
 
 <div class="form-group">
     {!! Form::label('published_at', 'Publish On:') !!}
