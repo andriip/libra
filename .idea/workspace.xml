@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd8d85a2-42aa-4f38-a186-cb7e91b05c66" name="Default" comment="Project configurations">
+    <list default="true" id="cd8d85a2-42aa-4f38-a186-cb7e91b05c66" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -625,7 +625,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449705273381</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Project configurations">
+      <created>1449705284009</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1449705284009</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -675,13 +681,13 @@
     <MESSAGE value="Add list.blade" />
     <MESSAGE value="Add routes" />
     <MESSAGE value="Add show.blade" />
-    <MESSAGE value="Project configurations" />
     <MESSAGE value="Add getImage and saveImage functions to the ArticlesController" />
     <MESSAGE value="Add buttons to the edit.blade" />
     <MESSAGE value="Add image input to the form.blade" />
     <MESSAGE value="Add getImage and saveImage routes to the routes.php" />
     <MESSAGE value="Add image tag with founded image to the show.blade" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add image tag with founded image to the show.blade" />
+    <MESSAGE value="Project configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project configurations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
