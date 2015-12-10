@@ -24,7 +24,7 @@
 
 
      {!! Form::model($article,['method'=>'PATCH', 'action'=>['ArticlesController@update', $article->id]]) !!}
-
+    <img src="{{$article->image}}" width='100' height='100'/>
     @include('articles.form', ['submitButtonText'=>'Update Article'])
 
     {!! Form::close() !!}
